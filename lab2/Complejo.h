@@ -11,12 +11,11 @@ public:
     
 	Complejo();
 	Complejo(float r, float i);
-	Complejo(Complejo& a);
 	~Complejo();
 
 	Complejo operator+(Complejo& a);
 	Complejo operator-(Complejo& a);
-	Complejo operator<(Complejo& a);
+    bool operator<(Complejo& a);
 	bool operator==(Complejo& a);
 
 	float getReal(){ return _real;}

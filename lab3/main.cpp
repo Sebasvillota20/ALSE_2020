@@ -9,13 +9,13 @@ using namespace std;
 int main(){
     vector<Geometrica*> vFig;
 
-    Circulo a = Circulo( 5. );
+    Circulo a( 5. );
     cout << "Hello World!" << endl;
     cout << "Perímetro: " << a.perimetro() << " y área: " << a.area() << endl;
     a.setRadio( 7. );
     cout << "Perímetro: " << a.perimetro() << " y área: " << a.area() << endl;
 
-    Cuadrado b = Cuadrado( 10. );
+    Cuadrado b( 10. );
     cout << "Perímetro: " << b.perimetro() << " y área: " << b.area() << endl;
 
     Geometrica* pG=0;

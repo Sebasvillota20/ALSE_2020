@@ -45,17 +45,23 @@ int main(int argc, char** argv){
             i++;
         }
     }
-    /*
-    std::cout << "¿Cuál es la varible del polinomio? ";
-    std::cin >> path;
-    */
+
     i=0;
-    while(i < 6 && Polynom[i].coef != 0){
-        if(i > 0 && Polynom[i].coef > 0 ) std::cout << "+";
-        std::cout << Polynom[i].coef << variable << "^" << Polynom[i].expo;
-        i++;
+    archivo.close();
+
+    std::ofstream archivo_sal;
+    path = argv[1];
+    archivo_sal.open( path, std::ofstream::out | std::ofstream::app);
+    if( archivo_sal.is_open() ){
+        while(i < 6 && Polynom[i].coef != 0){
+            if(i > 0 && Polynom[i].coef > 0 ) archivo_sal << "+";
+            archivo_sal << Polynom[i].coef << variable << "^" << Polynom[i].expo;
+            i++;
+        }
+        archivo_sal << std::endl;
     }
-    std::cout << std::endl;
+
+    archivo_sal.close();
 
     return 0;
 }
