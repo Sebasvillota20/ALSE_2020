@@ -1,3 +1,0 @@
-/home/alseuser/Documentos/ALSE_2020/lab1/build/CMakeFiles/rebuild_cache.dir
-/home/alseuser/Documentos/ALSE_2020/lab1/build/CMakeFiles/polynom.dir
-/home/alseuser/Documentos/ALSE_2020/lab1/build/CMakeFiles/edit_cache.dir
