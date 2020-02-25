@@ -1,10 +1,10 @@
-/**
- * Project Untitled
- */
-
 
 #include "Complejo.h"
+#include <iostream>
+#include <math.h>
 
+
+using namespace std;
 /**
  * Complejo implementation
  */
@@ -12,22 +12,15 @@
 /** Constructor por omisión
  */
 Complejo::Complejo() {
-	_real = 0.:
+    _real = 0.;
 	_imag = 0.;
 }
 
 /* Constructor con parámetros
  */
 Complejo::Complejo(float r, float i){
-	_real = r:
+    _real = r;
 	_imag = i;
-}
-
-/* Constructor por copia
- */
-Complejo::Complejo(Complejo& a){
-	_real = a._real;
-	_imag = a._imag;
 }
 
 Complejo::~Complejo(){
@@ -53,15 +46,16 @@ Complejo Complejo::operator +(Complejo& a){
 Complejo Complejo::operator -(Complejo& a){
 	Complejo c;
 	c._real = _real - a._real;
+    c._imag = _imag - a._imag;
 	return c;
 }
 
-Complejo Complejo::operator <(Complejo& a){
-	return this->angulo() < a.angulo();
+bool Complejo::operator <(Complejo& a){
+    return this->angulo() < a.angulo();
 }
 
 bool Complejo::operator ==(Complejo& a){
-	return this->_real == a._real && this->_imag && a._imag;
+    return (this->_real == a._real) && (this->_imag == a._imag);
 
 }
 
